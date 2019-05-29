@@ -1,10 +1,10 @@
-ifeq ($(KERNELRELEASE),)
+obj-m := vser.o
 
-	KERNELDIR := /usr/src/kernels/$(shell uname -r)
-	PWD := $(shell pwd)
+KERNELDIR := /usr/src/kernels/$(shell uname -r)
+PWD := $(shell pwd)
 
-	all:
-	make -C $(KERNELDIR) M=$(PWD) modules
-	
-	clean:
-	make -C $(KERNELDIR) M=$(PWD) clean
+all:
+make -C $(KERNELDIR) M=$(PWD) modules
+
+clean:
+make -C $(KERNELDIR) M=$(PWD) clean
