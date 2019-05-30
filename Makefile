@@ -1,4 +1,5 @@
-obj-m := vser1.o
+obj-m := vser.o
+vser-obj-m := vser1.o bar.o
 
 KERNELDIR := /usr/src/kernels/$(shell uname -r)
 PWD := $(shell pwd)

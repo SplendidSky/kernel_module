@@ -2,8 +2,11 @@
 #include <linux/kernel.h>
 #include <linux/module.h>
 
+extern void bar(void);
+
 static int __init vser_init(void) {
 	printk("vser_init\n");
+	bar();
 	return 0;
 }
 
