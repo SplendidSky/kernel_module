@@ -17,7 +17,9 @@ static int __init vser_init(void) {
 	printk("vser_init\n");
 	printk("baudrate: %d\n", baudrate);
 	printk("port: ");
-	for (int i = 0; i < ARRAY_SIZE(port); i++) {
+
+	int i;
+	for (i = 0; i < ARRAY_SIZE(port); i++) {
 		printk("%d ", port[i]);
 	}
 	printk("name: %s\n", name);
