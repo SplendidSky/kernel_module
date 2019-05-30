@@ -8,9 +8,9 @@ static int baudrate = 9600;
 static int port[4] = { 0, 1, 2, 3 };
 static char *name = "vser";
 
-moudule_param(baudrate, int, S_IRUGO);
-moudule_param_array(port, int, NULL, S_IRUGO);
-moudule_param(name, charp, S_IRUGO);
+module_param(baudrate, int, S_IRUGO);
+module_param_array(port, int, NULL, S_IRUGO);
+module_param(name, charp, S_IRUGO);
 
 
 static int __init vser_init(void) {
@@ -22,6 +22,7 @@ static int __init vser_init(void) {
 	for (i = 0; i < ARRAY_SIZE(port); i++) {
 		printk("%d ", port[i]);
 	}
+	printk("\n");
 	printk("name: %s\n", name);
 	bar();
 	return 0;
