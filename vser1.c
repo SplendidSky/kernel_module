@@ -10,7 +10,7 @@ static char *name = "vser";
 
 moudule_param(baudrate, int, S_IRUGO);
 moudule_param_array(port, int, NULL, S_IRUGO);
-moudule_param(name, charp, S_IRUGO)
+moudule_param(name, charp, S_IRUGO);
 
 
 static int __init vser_init(void) {
