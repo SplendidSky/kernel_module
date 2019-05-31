@@ -17,8 +17,10 @@ module_param(name, charp, S_IRUGO);
 
 static int __init vser_init(void) {
 	printk("vser_init\n");
-	printk("baudrate: %d\n", baudrate);
-	printk("port: ");
+	// printk("baudrate: %d\n", baudrate);
+	// printk("port: ");
+	printk("expval: %d\n",expval);
+	expfun();
 
 	int i;
 	for (i = 0; i < ARRAY_SIZE(port); i++) {
