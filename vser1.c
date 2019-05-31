@@ -3,6 +3,8 @@
 #include <linux/module.h>
 
 extern void bar(void);
+extern int expval;
+extern void expfun(void);
 
 static int baudrate = 9600;
 static int port[4] = { 0, 1, 2, 3 };
